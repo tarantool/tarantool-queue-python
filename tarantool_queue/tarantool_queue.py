@@ -382,7 +382,7 @@ class Queue(object):
 
     @staticmethod
     def basic_deserialize(data):
-        return msgpack.unpackb(data)
+        return msgpack.unpackb(data, encoding='utf-8')
 
     def __init__(self, host="localhost", port=33013, space=0, schema=None):
         if not(host and port):
